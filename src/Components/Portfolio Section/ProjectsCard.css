@@ -1,0 +1,19 @@
+#card:hover #titles{
+    bottom: 0;
+    opacity: 1;
+}
+
+#card:hover #arrow-icon{
+    transform: translateX(0);
+}
+
+@media (max-width:500px) {
+    #card #titles{
+        bottom: 0;
+        opacity: 1;
+    }
+
+    #card #arrow-icon{
+        transform: translateX(0);
+    }
+}

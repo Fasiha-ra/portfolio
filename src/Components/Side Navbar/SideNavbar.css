@@ -1,0 +1,10 @@
+.nav-links li:hover a>h4 {
+    left: 50%;
+    transform: scale(1) translateX(-50%);
+    opacity: 1;
+}
+
+.nav-links li:hover a>i{
+    transform: translateX(50px);
+    opacity: 0;
+}

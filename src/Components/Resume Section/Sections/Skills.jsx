@@ -1,45 +1,50 @@
 import React from "react";
 
 const Skills = () => {
+  const skills = [
+    { name: "Front-End with React", percentage: 94 },
+    { name: "NextJS Development", percentage: 92 },
+    { name: "HTML", percentage: 90 },
+    { name: "CSS", percentage: 90 },
+    { name: "JavaScript", percentage: 75 },
+    { name: "Styled-Components", percentage: 80 },
+    { name: "MUI", percentage: 75 },
+    { name: "Tailwind", percentage: 75 },
+    { name: "Ant Design", percentage: 60 },
+  ];
+
   return (
     <div className="w-full h-full flex items-center justify-between gap-20">
+      {/* Skill Icons Section */}
       <div className="hidden lg:inline-block lg:min-w-[40%]">
-       
-        <div className="flex items-center gap-10 text-white text-xl font-bold my-6">
-          <div className="w-16 h-16 rounded-full bg-dark-blue">
-            <img src="/react.png" alt="" className="w-full h-full p-3" />
+        {skills.map((skill) => (
+          <div className="flex items-center gap-10 text-white text-xl font-bold my-6" key={skill.name}>
+            <div className="w-16 h-16 rounded-full bg-dark-blue flex items-center justify-center">
+              {/* Replace with actual icons or images */}
+              <span className="text-2xl">{skill.name[0]}</span>
+            </div>
+            <h1>{skill.name}</h1>
           </div>
-          <h1>Front-End with React</h1>
-        </div>
-        <div className="flex items-center gap-10 text-white text-xl font-bold ">
-          <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#e9532d]">
-            {/* <i class="ri-html5-fill text-4xl"></i> */}
-            <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white overflow-hidden">
-            {/* <i class="ri-stack-fill text-4xl text-white"></i> */}
-            <img src="/nextjs.png" alt="" className="w-full h-full" />
-          </div>
-          </div>
-          <h1 className="">NextJS Development</h1>
-        </div>
+        ))}
       </div>
+      {/* Progress Bars Section */}
       <div className="flex-1 flex flex-col gap-14">
-       
-        <div className="flex items-center justify-center gap-5">
-          <span className="text-white font-bold text-2xl xs:text-3xl">94%</span>
-          <span className="w-full inline-block h-2 before:rounded-full before:bg-light-pink before:w-[84%] before:absolute before:left-0 before:h-full before:top-0 relative bg-white  rounded-full">
-            <h1 className="text-white absolute lg:hidden block -top-6 xs:text-sm text-xs">
-              Front-End with React
-            </h1>
-          </span>
-        </div>
-        <div className="flex items-center justify-center gap-5">
-          <span className="text-white font-bold text-2xl xs:text-3xl">92%</span>
-          <span className="w-full inline-block h-2 before:rounded-full before:bg-light-pink before:w-[92%] before:absolute before:left-0 before:h-full before:top-0 relative bg-white  rounded-full">
-            <h1 className="text-white absolute lg:hidden block -top-6 xs:text-sm text-xs">
-              NextJS Development
-            </h1>
-          </span>
-        </div>
+        {skills.map((skill) => (
+          <div className="flex items-center justify-center gap-5" key={skill.name}>
+            <span className="text-white font-bold text-2xl xs:text-3xl">
+              {skill.percentage}%
+            </span>
+            <div className="relative w-full h-2 bg-white rounded-full overflow-hidden">
+              <div
+                className="absolute top-0 left-0 h-full bg-light-pink rounded-full"
+                style={{ width: `${skill.percentage}%` }}
+              ></div>
+              <h1 className="text-white absolute lg:hidden block -top-6 xs:text-sm text-xs">
+                {skill.name}
+              </h1>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

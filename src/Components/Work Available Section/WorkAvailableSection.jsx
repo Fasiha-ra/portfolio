@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -56,7 +57,7 @@ const WorkAvailableSection = () => {
           ref={heading1}
           className="text-white font-bold text-3xl lg:text-6xl leading-tight lg:w-1/2 w-[80%] text-center my-10"
         >
-          I'm{" "}
+          I&apos;m{" "}
           <span className="text-white font-bold text-3xl lg:text-6xl before:bg-light-pink before:absolute before:bottom-4 before:z-[-1] z-10  before:left-0 relative before:w-full before:h-2 before:opacity-60">
             Available
           </span>{" "}
@@ -65,8 +66,9 @@ const WorkAvailableSection = () => {
         <button
           ref={buttonRef}
           className="bg-light-pink text-lg text-white font-bold lg:px-14 lg:py-4 px-8 py-3 rounded-full before:w-72 before:scale-0 hover:before:scale-100 before:duration-300 before:h-32 before:bg-[#00c0ff] before:absolute before:top-1/2 before:left-1/2 before:translate-x-[-50%] before:translate-y-[-50%] relative before:z-[-1] z-10 overflow-hidden before:skew-x-[20deg]"
-        >
-          Hire Me Now
+       onClick={()=>(window.open('https://linkedin.com/in/fasiha-rehmat-ali-715037279', '_blank'))}
+       >
+        Hire Me Now
         </button>
       </div>
       <img

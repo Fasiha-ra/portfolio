@@ -34,18 +34,13 @@ const NavMobile = () => {
             className="ri-menu-line translate-x-[-50px] md:translate-x-[-150px] text-3xl"
             onClick={() => handleMenuBtn()}
           ></i>
-          <div className="w-16 object-center h-16 rounded-full overflow-hidden">
-            {/* <img
-            src="https://images.unsplash.com/photo-1630091003936-aea522c1e8c3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-            className=" object-cover w-full h-full object-bottom"
-          /> */}
+          {/* <div className="w-16 object-center h-16 rounded-full overflow-hidden">
             <img
               src="/Logo.png"
               alt=""
               className=" object-cover w-full h-full object-bottom"
             />
-          </div>
+          </div> */}
 
           <h1 className="text-black text-3xl font-bold ml-4">Fasiha</h1>
         </div>

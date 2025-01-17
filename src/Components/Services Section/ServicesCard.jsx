@@ -1,6 +1,7 @@
 import React from "react";
 import { forwardRef } from "react";
 
+// eslint-disable-next-line react/display-name
 const ServicesCard = forwardRef(({ icon, services, desc }, ref) => {
   return (
     <div

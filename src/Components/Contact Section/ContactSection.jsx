@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { contactDetails } from "../../Constants/contact_details";
@@ -78,9 +79,9 @@ const ContactSection = () => {
   return (
     <div
       ref={mainContainer}
-      className="w-full h-full flex flex-col lg:flex-row gap-20 lg:gap-32 items-center"
+      className="w-full h-full p-5"
     >
-      <form action="" onSubmit={handleSubmit} className="lg:w-[60%]">
+      {/* <form action="" onSubmit={handleSubmit} className="lg:w-[60%]">
         <div
           ref={leftRef}
           className="w-full h-full text-white gap-4 bg-[#012B45] lg:bg-[#00000031] flex flex-col text-base p-[10px] py-8 xs:p-5 sm:p-8 lg:p-16 items-start"
@@ -133,10 +134,10 @@ const ContactSection = () => {
             {loading ? "Sending..." : "Send Message"}
           </button>
         </div>
-      </form>
+      </form> */}
       <div
         ref={rightRef}
-        className="flex flex-col items-center lg:items-start gap-12 lg:gap-20"
+        className="grid grid-cols-1 lg:grid-cols-2 items-center lg:items-start gap-12 lg:gap-20"
       >
         {contactDetails.map((data, i) => (
           <div
@@ -149,15 +150,17 @@ const ContactSection = () => {
               <i className={`${data.icon} text-3xl`}></i>
             </div>
             <div className="text-white">
-              <a
-                href={`mailto:${data.details}`}
-                className="text-base uppercase opacity-70 hover:cursor-pointer"
-              >
-                {data.title}
-              </a>
+              
               <h3 className="text-lg mt-1 lg:mt-3 font-bold ">
-                {data.details}
+              {data.title}
               </h3>
+              <a
+                href={data.href}
+                className="text-base  opacity-70 hover:cursor-pointer"
+              >
+                {data.details}
+               
+              </a>
             </div>
           </div>
         ))}

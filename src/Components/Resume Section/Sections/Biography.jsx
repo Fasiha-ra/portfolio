@@ -15,7 +15,7 @@ const Biography = () => {
         </div>{" "}
         <div className="flex items-center justify-between border-b-[1px] border-white border-opacity-20 pb-2">
           <h3 className="font-bold text-lg">Linkedin</h3>
-          <p className="opacity-80">linkedin.com/in/fasiha-rehmat-ali-715037279</p>
+          <p className="opacity-80">https://tinyurl.com/fasiha-rehmat</p>
         </div>
       </div>
       <div className="lg:w-1/2 text-white">

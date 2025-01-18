@@ -66,7 +66,7 @@ const WorkAvailableSection = () => {
         <button
           ref={buttonRef}
           className="bg-light-pink text-lg text-white font-bold lg:px-14 lg:py-4 px-8 py-3 rounded-full before:w-72 before:scale-0 hover:before:scale-100 before:duration-300 before:h-32 before:bg-[#00c0ff] before:absolute before:top-1/2 before:left-1/2 before:translate-x-[-50%] before:translate-y-[-50%] relative before:z-[-1] z-10 overflow-hidden before:skew-x-[20deg]"
-       onClick={()=>(window.open('https://linkedin.com/in/fasiha-rehmat-ali-715037279', '_blank'))}
+       onClick={()=>(window.open('https://tinyurl.com/fasiha-rehmat', '_blank'))}
        >
         Hire Me Now
         </button>
